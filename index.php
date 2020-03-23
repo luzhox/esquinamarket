@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-  <body <?php body_class(); ?>>
+<?php include('menu.php')?>
   <?php the_field('my_blog_pe') ?>
 		<?php $args = array(
 			'posts_per_page'=> 1,
@@ -139,5 +139,3 @@
 		</div>
 </section>
   <?php get_footer(); ?>
-  </body>
-</html>
