@@ -21,10 +21,9 @@
     position: absolute;
   }
   @include desktop {
-
     &.active {
       height: 70px;
-      background: $yellow;
+      background: $primary;
       .container {
         max-width: 95%;
         @include tablet{
@@ -155,7 +154,7 @@
 
             }
             @include mobile{
-              border-top: 1px solid #dedede;
+              border-top: 1px solid $gray3;
               padding: 16px;
               text-align: left;
               position: relative;
@@ -174,7 +173,7 @@
                 top: 24px;
               }
               &:nth-child(6){
-                border-bottom: 1px solid #c4c4c4;
+                border-bottom: 1px solid $gray3;
                 margin-right: 0px;
 
               }
@@ -216,7 +215,7 @@
                 content: "";
                 width: 0%;
                 height: 2px;
-                background-color: $yellow;
+                background-color: $primary;
                 position: absolute;
                 bottom: 12px;
                 left: 0px;
@@ -231,7 +230,7 @@
                 width: auto;
               }
               &:hover {
-                color:$yellow;
+                color:$primary;
                 @include tablet {
                   &::before {
                     width: 100%;
@@ -242,7 +241,7 @@
             &.current_page_item {
               @include tablet {
                 a {
-                  color: $yellow;
+                  color: $primary;
                   &::before {
                     width: 100%;
 
@@ -297,7 +296,7 @@
                     a{
                      
                       &:hover{
-                        color:$yellow;
+                        color:$primary;
                       }
                     }
                     &:hover{
@@ -325,13 +324,12 @@
             }
             &:last-child{
               @include  desktop{
-                background-color: $yellow;
+                background-color: $primary;
                 color:$gray2;
                 border-radius: 12px;
                 font-weight: 800;
                 &:hover{
-                  box-shadow: 0px 0px 10px $yellow;;
-  
+                  box-shadow: 0px 0px 10px $primary;
                 }
                 a{
                   color: $gray2;
@@ -443,14 +441,14 @@
         display: none;
       }
       a {
-        color: $yellow;
+        color: $primary;
         transition: ease-in-out 0.3s;
       }
       .menu {
         height: 2px;
         width: 22px;
         display: block;
-        background-color: $yellow;
+        background-color: $primary;
         margin-bottom: 6px;
         -webkit-transition: all 0.3s ease-in-out;
         -moz-transition: all 0.3s ease-in-out;
@@ -493,4 +491,3 @@
     }
   }
 }
-

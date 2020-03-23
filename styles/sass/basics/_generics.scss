@@ -1,9 +1,7 @@
 @import "_grid";
 @import "_variables";
-
 @import "_icons";
 @import "_buttons";
-
 @import "inputs";
 
 * {
@@ -29,7 +27,6 @@ h5 {
   font-weight: 700;
   color: $gray;
   letter-spacing: -0.4px;
-
 }
 
 #contenido {
@@ -72,7 +69,6 @@ h1.title {
   }
 }
 
-
 span.title{
   font-size: 18px;
   line-height: 29px;
@@ -83,9 +79,7 @@ span.title{
   @include tablet{
     text-align: left;
     font-size: 24px;
-
   }
-
 }
 
 h4.title {
@@ -96,13 +90,10 @@ h4.title {
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: $gray;
-
   @include tablet{
     font-size: 14px;
-
   }
 }
-
 
 p {
   font-family: $primary-text;
@@ -115,13 +106,10 @@ p {
     font-size: 24px;
   }
 }
-
-
-
 .line {
   height: 4px;
   width: 80px;
-  background-color: $yellow;
+  background-color: $primary;
   margin: 0 auto;
   margin-bottom: 40px;
 }
@@ -132,9 +120,7 @@ p {
     display: block !important;
   }
 }
-.clear {
-  clear: both;
-}
+
 .hide-on-medium-only {
   display: none;
   @include tablet {
@@ -157,24 +143,12 @@ p {
 }
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
-  background: $yellow !important;
-  border: 1px solid $yellow;
+  background: $primary !important;
+  border: 1px solid $primary;
 }
 .container {
-
   @include tablet {
     padding-top: 64px;
     padding-bottom: 64px;
   }
-}
-
-.left{
-  text-align: left;
-}
-
-.center{
-  text-align: center!important;
-}
-.right{
-  text-align: right;
 }

@@ -1,17 +1,4 @@
-
-  
-  [class^="ico-"], [class*=" ico-"] {
-   &::before{
-    content:'';
-    display: inline-block;
-    background-size: contain!important;
-    background-repeat: no-repeat!important;
-    background-position: center center!important;
-   }
-  }
-
   .ico-twitter{
-
       width: 37px;
       height: 38px;
       display: inline-block;
@@ -26,7 +13,6 @@
   }
 
   .ico-linkedin{
-
       width: 35px;
       height: 37px;
       display: inline-block;

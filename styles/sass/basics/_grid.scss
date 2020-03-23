@@ -6,23 +6,6 @@ $breakpoint-tablet: 744px;
 $breakpoint-desktop: 1240px;
 
 
-.row {
-    margin-left: auto;
-    margin-right: auto;
-}
-  
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.row .col {
-    float: left;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
 /// Show only on desktop screens
 @mixin desktop {
     @media only screen and (min-width: $breakpoint-desktop){
@@ -56,6 +39,4 @@ $breakpoint-desktop: 1240px;
         max-width: 1184px;
         box-sizing: border-box;
     }
-    
- 
  }  

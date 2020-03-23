@@ -1,7 +1,7 @@
 .modal{
     display: none;
     .overlay{
-        background: rgba(37, 44, 62, 0.79);
+        background: $overlay;
         position: fixed;
         top: 0;
         left: 0;
@@ -47,7 +47,7 @@
       .modal-content{
         h2{
             
-            color: #383B4E;
+            color: $gray2;
             font-weight: 600;
             text-align: left;
             @include tablet{
@@ -59,7 +59,7 @@
         p{
             font-size: 14px;
             line-height: 17px;
-            color: #383B4E;
+            color: $gray2;
 
         }
         .input-radio{
@@ -68,7 +68,7 @@
             line-height: 15px;
             display: flex;
             align-items: center;
-            color: #383B4E;
+            color: $gray2;
             margin-top: 16px;
             margin-bottom: 16px;
             @media only screen and (max-width:321px){
@@ -186,7 +186,6 @@
       opacity: 0;
     }
     100% {
-      
       opacity: 1;
     }
   }
