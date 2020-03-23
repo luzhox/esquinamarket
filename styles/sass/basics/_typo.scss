@@ -1,0 +1,36 @@
+.section-title{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 156%;
+    text-align: center;
+    letter-spacing: 0.085em;
+    text-transform: uppercase;
+    color: $gray;
+    display: block;
+    margin-bottom: 8px;
+    &::after{
+        content:'';
+        width: 76px;
+        height: 1px;
+        display: block;
+        margin: 0 auto;
+        background: $yellow;
+        margin-top: 8px;
+    }
+}
+h2{
+    margin-top: 16px;
+    &.title p{
+        font-size: 28px;
+        line-height: 120%;
+        text-align: center;
+        color: $gray;
+        font-weight: 300;
+        strong{
+            font-weight: 700;
+        }
+        @include tablet{
+            font-size: 44px;
+        }
+    }
+}
