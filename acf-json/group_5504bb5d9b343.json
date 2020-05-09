@@ -65,7 +65,8 @@
                             "default_value": "",
                             "tabs": "all",
                             "toolbar": "full",
-                            "media_upload": 1
+                            "media_upload": 1,
+                            "delay": 0
                         }
                     ],
                     "min": "",
@@ -91,9 +92,10 @@
                                 "id": ""
                             },
                             "min": 1,
-                            "max": "",
+                            "max": 0,
                             "layout": "block",
                             "button_label": "Add Slide",
+                            "collapsed": "",
                             "sub_fields": [
                                 {
                                     "key": "field_5504bc0da6c97",
@@ -111,7 +113,8 @@
                                     "default_value": "",
                                     "tabs": "all",
                                     "toolbar": "full",
-                                    "media_upload": 1
+                                    "media_upload": 1,
+                                    "delay": 0
                                 }
                             ]
                         }
@@ -142,6 +145,7 @@
                             "max": 3,
                             "layout": "block",
                             "button_label": "Add Column",
+                            "collapsed": "",
                             "sub_fields": [
                                 {
                                     "key": "field_5504d183446b9",
@@ -159,7 +163,8 @@
                                     "default_value": "",
                                     "tabs": "all",
                                     "toolbar": "full",
-                                    "media_upload": 1
+                                    "media_upload": 1,
+                                    "delay": 0
                                 }
                             ]
                         }
@@ -209,7 +214,10 @@
                                 "id": ""
                             },
                             "message": "Show post header",
-                            "default_value": 0
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
                         },
                         {
                             "key": "field_55e11c87db6be",
@@ -225,7 +233,10 @@
                                 "id": ""
                             },
                             "message": "Show full message",
-                            "default_value": 0
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
                         }
                     ],
                     "min": "",
@@ -253,5 +264,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1445816921
+    "modified": 1589065260
 }
