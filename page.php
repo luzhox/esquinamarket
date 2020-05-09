@@ -4,7 +4,7 @@
     if ( function_exists('get_field') && get_field('modules') !== null ) {
       the_modules_loop();
     } else {
-      the_module('post');
+      // the_module('post');
     }
   }
   ?>
