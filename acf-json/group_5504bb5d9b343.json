@@ -15,11 +15,8 @@
                 "class": "",
                 "id": ""
             },
-            "button_label": "Add Module",
-            "min": "",
-            "max": "",
-            "layouts": [
-                {
+            "layouts": {
+                "5504bb6d8b506": {
                     "key": "5504bb6d8b506",
                     "name": "hero",
                     "label": "Hero",
@@ -72,7 +69,7 @@
                     "min": "",
                     "max": ""
                 },
-                {
+                "5504bbf5a6c95": {
                     "key": "5504bbf5a6c95",
                     "name": "carousel",
                     "label": "Carousel",
@@ -122,7 +119,7 @@
                     "min": "",
                     "max": ""
                 },
-                {
+                "5504d162446b7": {
                     "key": "5504d162446b7",
                     "name": "text_columns",
                     "label": "Text Columns",
@@ -172,7 +169,7 @@
                     "min": "",
                     "max": ""
                 },
-                {
+                "55e11c6fdb6bd": {
                     "key": "55e11c6fdb6bd",
                     "name": "post",
                     "label": "Post",
@@ -241,8 +238,143 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5eb7397a13c7e": {
+                    "key": "layout_5eb7397a13c7e",
+                    "name": "texto",
+                    "label": "Mi primer texto",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5eb739a313c82",
+                            "label": "texto",
+                            "name": "texto",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5ec07be67d6a8",
+                            "label": "imagen",
+                            "name": "imagen",
+                            "type": "image",
+                            "instructions": "esta imagen pesa como max 5mb",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": 10,
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5ec07ccd7d6a9",
+                            "label": "Color de mi texto",
+                            "name": "color",
+                            "type": "color_picker",
+                            "instructions": "elige el color del texto",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "#f4f4f4"
+                        },
+                        {
+                            "key": "field_5ec07f3dfb901",
+                            "label": "Productos",
+                            "name": "productos_repeater",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "field_5ec07fa5fb903",
+                            "min": 0,
+                            "max": 4,
+                            "layout": "table",
+                            "button_label": "Agregar producto",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5ec07f8afb902",
+                                    "label": "imagen",
+                                    "name": "imagen",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "preview_size": "medium",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
+                                },
+                                {
+                                    "key": "field_5ec07fa5fb903",
+                                    "label": "texto",
+                                    "name": "texto",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
-            ]
+            },
+            "button_label": "Add Module",
+            "min": "",
+            "max": ""
         }
     ],
     "location": [
@@ -264,5 +396,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1589065260
+    "modified": 1589673983
 }
