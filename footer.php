@@ -2,12 +2,12 @@
 
 <footer class="site-footer"  role="contentinfo">
         <div class="container">
-                <div class="logo">
-                        <img id="logito" src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-footer.svg">
+                <div class="brand">
+                        <img id="logito" src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-invert.svg">
                 </div>
                 <div class="links">
                 <p class="title">Categoría:</p>
-                
+
                         <ul>
                                 <li><a href="./beneficios-apcci/">Opcion 1</a></li>
                                 <li><a href="./nuestros-asociados/">Opcion 2</a></li>
@@ -27,7 +27,7 @@
                         <p class="title">Vísitanos en:</p>
                         <p class="content"><?php echo esc_html(get_option('direccion_estudio')); ?></p>
                 </div>
-        
+
         </div> <!--container-->
 
 </footer><!--Cierra el footer-->

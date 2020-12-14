@@ -1,47 +1,79 @@
-$ = jQuery.noConflict();
+$ = jQuery.noConflict()
 
 $(document).ready(function () {
-
   // Inicializar aos
 
-  AOS.init();
+  AOS.init()
+
+  // Propiedades de scroll de menu
+  var prevScrollpos = $(window).scrollTop() + 70
+
+  $(window).scroll(function () {
+    var currentScrollPos = $(window).scrollTop()
+    if ($(window).scrollTop() > 70) {
+      if (prevScrollpos > currentScrollPos) {
+        $('#masthead').css('top', '0')
+        $('#masthead').addClass('actived')
+        var brandtwo = $('#brand').data('brandtwo')
+        $('#brand').attr('src', brandtwo)
+      } else {
+        $('#masthead').css('top', '-75px')
+      }
+      prevScrollpos = currentScrollPos
+    } else {
+      var brand = $('#brand').data('brand')
+
+      $('#masthead').removeClass('actived')
+      $('#brand').attr('src', brand)
+    }
+  })
 
   // #Propiedades Menu Mobile
 
   $('.sandwich').click(function () {
-    $('.sandwich').toggleClass('active');
-    $('.container-nav').toggleClass('active');
-  });
+    $('#masthead').toggleClass('active')
+    $('.sandwich').toggleClass('active')
+    $('.container-nav').toggleClass('active')
+    if ($('.sandwich').hasClass('active')) {
+      var brandtwo = $('#brand').data('brandtwo')
+      $('#brand').attr('src', brandtwo)
+    } else {
+      var brand = $('#brand').data('brand')
+      $('#brand').attr('src', brand)
+    }
+  })
 
   // #Propiedades Smooth Scrolling
 
-  $("a").on('click', function (event) {
-
-    if (this.hash !== "") {
-      event.preventDefault();
-      var hash = this.hash;
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 1000, function () {
-
-        window.location.hash = hash;
-      });
+  $('a').on('click', function (event) {
+    if (this.hash !== '') {
+      event.preventDefault()
+      var hash = this.hash
+      $('html, body').animate(
+        {
+          scrollTop: $(hash).offset().top,
+        },
+        1000,
+        function () {
+          window.location.hash = hash
+        }
+      )
     }
-  });
+  })
 
   // #Propiedades Input
 
   $('.input-field').focusin(function (e) {
-    $(this).addClass('active');
-  });
+    $(this).addClass('active')
+  })
 
   $('.input-field').focusout(function (e) {
     if ($(this).find('.wpcf7-form-control-wrap input').attr('value').length <= 0) {
-      $(this).removeClass('active');
+      $(this).removeClass('active')
     } else if ($(this).find('.wpcf7-form-control-wrap input').attr('value').length >= 0) {
-      $(this).addClass('active');
+      $(this).addClass('active')
     }
-  });
+  })
 
   // #Propiedades Modal
 
@@ -50,7 +82,6 @@ $(document).ready(function () {
     $('#' + modal).removeClass('active')
   })
 
-
   $('.overlay').click(function () {
     var modal = $('.close').data('modal')
     $('#' + modal).removeClass('active')
@@ -58,8 +89,8 @@ $(document).ready(function () {
 
   // #Propiedades Carousel
 
-   function addCarousel(element, index, number, mover, margin, itemstablet, loop, flechas, dots, autoplay, velocidad, animateIn, animateOut, autoWidth, slideBy, autoWidthMobile, margindesktop) {
-    $("." + element + ".owl-carousel").owlCarousel({
+  function addCarousel(element, index, number, mover, margin, itemstablet, loop, flechas, dots, autoplay, velocidad, animateIn, animateOut, autoWidth, slideBy, autoWidthMobile, margindesktop) {
+    $('.' + element + '.owl-carousel').owlCarousel({
       loop: loop,
       margin: margin,
       nav: flechas,
@@ -78,61 +109,65 @@ $(document).ready(function () {
           items: 1,
           mouseDrag: false,
           autoWidth: autoWidthMobile,
-
         },
         600: {
           items: itemstablet,
           mouseDrag: false,
           autoWidth: autoWidth,
           margin: margindesktop,
-
         },
         1000: {
           items: itemstablet,
           autoWidth: autoWidth,
           margin: margindesktop,
-
-
-        }
-      }
-    });
+        },
+      },
+    })
   }
+  addCarousel('hero-container', 0, 1, true, 0, 1, true, true, false, true, 5000)
 
-  owl.on('next.owl.carousel', function (event) {
-    var pos = parseInt($('.pageinitial').html()) + 1
-    if (pos < 3) {
-      $('.pageinitial').html(pos)
-    }
-  })
+  // owl.on('next.owl.carousel', function (event) {
+  //   var pos = parseInt($('.pageinitial').html()) + 1
+  //   if (pos < 3) {
+  //     $('.pageinitial').html(pos)
+  //   }
+  // })
 
-  owl.on('prev.owl.carousel', function (event) {
-    var posEnd = parseInt($('.pageinitial').html()) - 1
-    if (posEnd > 0) {
-      $('.pageinitial').html(posEnd)
-    }
-  })
+  // owl.on('prev.owl.carousel', function (event) {
+  //   var posEnd = parseInt($('.pageinitial').html()) - 1
+  //   if (posEnd > 0) {
+  //     $('.pageinitial').html(posEnd)
+  //   }
+  // })
 
   $('.arrowNext').click(function () {
-    owl.trigger('next.owl.carousel');
+    owl.trigger('next.owl.carousel')
   })
 
   $('.arrowPrev').click(function () {
-    owl.trigger('prev.owl.carousel', [300]);
+    owl.trigger('prev.owl.carousel', [300])
   })
 
-  if (window.matchMedia("(max-width: 768px)").matches) {
-
+  if (window.matchMedia('(max-width: 768px)').matches) {
   } else {
   }
 
   // Modal de Biografia
   $('.bio').click(function (e) {
     var bio = e.target.parentNode.parentNode.getAttribute('id')
-    var title = $('#' + bio).find('.member__name').html()
-    var contenido = $('#' + bio).find('.member__content').html()
-    var image = $('#' + bio + ' .img').data("image");
-    var cargo = $('#' + bio).find('.member__position').html()
-    var empresa = $('#' + bio).find('.member__work').html()
+    var title = $('#' + bio)
+      .find('.member__name')
+      .html()
+    var contenido = $('#' + bio)
+      .find('.member__content')
+      .html()
+    var image = $('#' + bio + ' .img').data('image')
+    var cargo = $('#' + bio)
+      .find('.member__position')
+      .html()
+    var empresa = $('#' + bio)
+      .find('.member__work')
+      .html()
 
     $('#modalMiembro .modal-content .text h3').html(title)
     $('#modalMiembro .modal-content .text span').html(cargo + ' - ' + empresa)
@@ -140,4 +175,4 @@ $(document).ready(function () {
     document.querySelector('#modalMiembro .modal-content .imagen').style.background = 'url(' + image + `)`
     $('#modalMiembro').addClass('active')
   })
-});
+})
