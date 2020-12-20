@@ -1,6 +1,6 @@
 {
     "window.menuBarVisibility": "default",
-    "window.zoomLevel": 2,
+    "window.zoomLevel": 0,
     "terminal.integrated.shell.windows": "",
     "editor.fontSize": 16,
     "git.autorefresh": false,
