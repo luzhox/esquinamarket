@@ -29,7 +29,10 @@ add_action('login_enqueue_scripts','admin_styles', 10 );
 function menus(){
 	register_nav_menus(array(
   'menu_principal' =>__('Menu Principal','Page')
-));
+  ));
+  register_nav_menus(array(
+    'footer' =>__('Links de Footer','Page')
+  ));
 }
 add_action( 'init', 'menus' );
 add_action( 'wp_enqueue_scripts', function() {
@@ -111,4 +114,20 @@ function excerpt($num) {
   array_pop($content);
   $content = implode(" ",$content)."...";
   echo $content;
-  }?>
+  }
+    //Definir Zona de Widgets
+    function theme_widgets(){
+    
+      register_sidebar(array(
+        'name'=>'Zona de Dirección de Sedes',
+        'id'=>'location',
+        'before_widget'=>'<div class="Sedes">',
+        'after_widget'=>'</div>',
+        'before_title'=>'<h3>',
+        'after_title'=>'</h3>'
+      ));
+  
+    }
+    add_action('widgets_init','theme_widgets');
+    
+  ?>
