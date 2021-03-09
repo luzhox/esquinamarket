@@ -14,9 +14,6 @@ function page_ajustes(){
 function page_registrar_opciones(){
     //Registrar opciones una por campo
     register_setting('page_ajustes_opciones_grupo', 'numero_page');
-    register_setting('page_ajustes_opciones_grupo', 'facebook_page');
-    register_setting('page_ajustes_opciones_grupo', 'linkedin_page');
-    register_setting('page_ajustes_opciones_grupo', 'insta_page');
     register_setting('page_ajustes_opciones_grupo', 'correo_page');
 }
 
@@ -38,20 +35,6 @@ function page_registrar_opciones(){
                     <th scope="row" style="font-family:'Lato'; font-weight:400;">Correo de contacto</th>
                     <td><input type="text" name="correo_page"  style="min-width:300px;"  value="<?php echo  esc_attr(get_option('correo_page'))?>"></td>
                 </tr>
-
-                <tr valign="top">
-                    <th scope="row" style="font-family:'Lato'; font-weight:400;">Link de facebook</th>
-                    <td><textarea name="facebook_page" style="min-width:300px; min-height:67px;" ><?php echo  esc_attr(get_option('facebook_page'))?></textarea></td>
-                </tr>
-                <tr valign="top">
-                    <th scope="row" style="font-family:'Lato'; font-weight:400;">Link de Instagram</th>
-                    <td><textarea name="insta_page" style="min-width:300px; min-height:67px;" ><?php echo  esc_attr(get_option('insta_page'))?></textarea></td>
-                </tr>
-                <tr valign="top">
-                    <th scope="row" style="font-family:'Lato'; font-weight:400;">Link de Linkedin</th>
-                    <td><textarea name="linkedin_page" style="min-width:300px; min-height:67px;" ><?php echo  esc_attr(get_option('linkedin_page'))?></textarea></td>
-                </tr>
-
 
             </table>
 

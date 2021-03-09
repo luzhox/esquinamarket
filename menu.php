@@ -3,7 +3,7 @@
 			<div class="container">
 				<div class="brand__container">
 					<a  class="brand" href="<?php echo esc_url(home_url('/')); ?>">
-						<img id="brand" data-brand="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.svg" data-brandtwo="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-invert.svg" src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.svg">
+						<img id="brand" data-brand="<?php echo get_theme_mod('brand_img'); ?>" data-brandtwo="<?php echo get_theme_mod('brand_img-revert'); ?>" src="<?php echo get_theme_mod('brand_img'); ?>">
 					</a>
 				</div>
 				<div class="sandwich">

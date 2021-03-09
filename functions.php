@@ -1,5 +1,6 @@
 <?php
   require('inc/opciones.php');
+  require('inc/customizer.php');
   require('lib/helpers.php');
   add_action( 'after_setup_theme', function() {
   add_theme_support( 'title-tag' );
@@ -32,6 +33,9 @@ function menus(){
   ));
   register_nav_menus(array(
     'footer' =>__('Links de Footer','Page')
+  ));
+  register_nav_menus(array(
+    'redes' =>__('Redes Sociales','Page')
   ));
 }
 add_action( 'init', 'menus' );
@@ -117,7 +121,7 @@ function excerpt($num) {
   }
     //Definir Zona de Widgets
     function theme_widgets(){
-    
+
       register_sidebar(array(
         'name'=>'Zona de Dirección de Sedes',
         'id'=>'location',
@@ -126,8 +130,8 @@ function excerpt($num) {
         'before_title'=>'<h3>',
         'after_title'=>'</h3>'
       ));
-  
+
     }
     add_action('widgets_init','theme_widgets');
-    
+
   ?>
