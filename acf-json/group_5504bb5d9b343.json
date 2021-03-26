@@ -215,38 +215,58 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_603f13cae663a": {
-                    "key": "layout_603f13cae663a",
+                "layout_605e62f74c436": {
+                    "key": "layout_605e62f74c436",
                     "name": "hero-blog",
                     "label": "Hero Blog",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_603f13f9e663e",
-                            "label": "Imagen de artículo",
-                            "name": "imagen_de_articulo",
-                            "type": "text",
+                            "key": "field_605e63164c437",
+                            "label": "Imagen de fondo",
+                            "name": "bg",
+                            "type": "image",
                             "instructions": "",
-                            "required": 0,
+                            "required": 1,
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
+                            "return_format": "url",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
                         },
                         {
-                            "key": "field_603f13e1e663c",
-                            "label": "Texto de artículo",
-                            "name": "texto_de_articulo",
+                            "key": "field_605e6736732b3",
+                            "label": "Overlay",
+                            "name": "overlay",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": ""
+                        },
+                        {
+                            "key": "field_605e631f4c438",
+                            "label": "Texto Principal",
+                            "name": "text",
                             "type": "wysiwyg",
                             "instructions": "",
-                            "required": 0,
+                            "required": 1,
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
@@ -260,9 +280,9 @@
                             "delay": 0
                         },
                         {
-                            "key": "field_603f13eee663d",
-                            "label": "Link de artículo",
-                            "name": "link_de_articulo",
+                            "key": "field_605e63574c439",
+                            "label": "Boton",
+                            "name": "button",
                             "type": "link",
                             "instructions": "",
                             "required": 0,
@@ -310,5 +330,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1614746634
+    "modified": 1616799584
 }
