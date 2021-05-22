@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 <?php include('menu.php')?>
-
-
   <?php the_field('my_blog_pe') ?>
 		<?php $args = array(
 			'posts_per_page'=> 1,
@@ -21,7 +19,6 @@
 			</div>
 		</div>
   <?php endwhile; wp_reset_postdata(); ?>
-
 
 <section id="articulos">
 	<div class="container">
