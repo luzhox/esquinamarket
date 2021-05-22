@@ -5,22 +5,22 @@ $(document).ready(function () {
   AOS.init()
 
   // Propiedades de scroll de menu
-  var prevScrollpos = $(window).scrollTop() + 70
+  const prevScrollpos = $(window).scrollTop() + 70
 
   $(window).scroll(function () {
-    var currentScrollPos = $(window).scrollTop()
+    const currentScrollPos = $(window).scrollTop()
     if ($(window).scrollTop() > 70) {
       if (prevScrollpos > currentScrollPos) {
         $('#masthead').css('top', '0')
         $('#masthead').addClass('actived')
-        var brandtwo = $('#brand').data('brandtwo')
+        const brandtwo = $('#brand').data('brandtwo')
         $('#brand').attr('src', brandtwo)
       } else {
         $('#masthead').css('top', '-75px')
       }
       prevScrollpos = currentScrollPos
     } else {
-      var brand = $('#brand').data('brand')
+      const brand = $('#brand').data('brand')
 
       $('#masthead').removeClass('actived')
       $('#brand').attr('src', brand)
@@ -34,10 +34,10 @@ $(document).ready(function () {
     $('.site-header-sandwich').toggleClass('active')
     $('.site-header-nav').toggleClass('active')
     if ($('.site-header-sandwich').hasClass('active')) {
-      var brandtwo = $('#brand').data('brandtwo')
+      const brandtwo = $('#brand').data('brandtwo')
       $('#brand').attr('src', brandtwo)
     } else {
-      var brand = $('#brand').data('brand')
+      const brand = $('#brand').data('brand')
       $('#brand').attr('src', brand)
     }
   })
@@ -47,7 +47,7 @@ $(document).ready(function () {
   $('a').on('click', function (event) {
     if (this.hash !== '') {
       event.preventDefault()
-      var hash = this.hash
+      const hash = this.hash
       $('html, body').animate(
         {
           scrollTop: $(hash).offset().top,
@@ -77,12 +77,12 @@ $(document).ready(function () {
   // #Propiedades Modal
 
   $('.close').click(function () {
-    var modal = $('.close').data('modal')
+    const modal = $('.close').data('modal')
     $('#' + modal).removeClass('active')
   })
 
   $('.overlay').click(function () {
-    var modal = $('.close').data('modal')
+    const modal = $('.close').data('modal')
     $('#' + modal).removeClass('active')
   })
 

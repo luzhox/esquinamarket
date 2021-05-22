@@ -13,10 +13,11 @@
         @extend .btn;
         background-color: $primary;
         color: white;
-        font-size: 32px;
+        font-size: 18px;
         line-height: 156%;
         text-transform: uppercase;
         font-weight: 800;
+        letter-spacing: 0.6px;
 
         &:hover {
             background: $primary-hover;
