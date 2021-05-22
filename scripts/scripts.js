@@ -29,11 +29,11 @@ $(document).ready(function () {
 
   // #Propiedades Menu Mobile
 
-  $('.sandwich').click(function () {
+  $('.site-header-sandwich').click(function () {
     $('#masthead').toggleClass('active')
-    $('.sandwich').toggleClass('active')
-    $('.container-nav').toggleClass('active')
-    if ($('.sandwich').hasClass('active')) {
+    $('.site-header-sandwich').toggleClass('active')
+    $('.site-header-nav').toggleClass('active')
+    if ($('.site-header-sandwich').hasClass('active')) {
       var brandtwo = $('#brand').data('brandtwo')
       $('#brand').attr('src', brandtwo)
     } else {
