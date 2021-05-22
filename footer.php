@@ -1,4 +1,4 @@
-</div> <!-- cierra el contenido -->
+</div>
 
 <footer class="site-footer"  role="contentinfo">
         <div class="container">
@@ -28,12 +28,11 @@
                         <?php dynamic_sidebar('location')?>
                 </div>
 
-        </div> <!--container-->
+        </div>
 
-</footer><!--Cierra el footer-->
+</footer>
 
-</div> <!-- cierra el page -->
-
+</div>
 <?php wp_footer(); ?>
 </body>
 </html>
