@@ -8,5 +8,4 @@
   require('inc/libraries.php');
   require('lib/helpers.php');
   require('inc/etc.php');
-
   ?>
