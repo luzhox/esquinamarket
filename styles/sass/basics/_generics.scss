@@ -16,19 +16,26 @@
     outline: 0px;
 }
 
-#contenido {
-    overflow-x: hidden;
-    min-height: 100vh;
 
-    @include desktop {
-        overflow: initial;
-    }
-}
 
 body {
     margin: 0;
     overflow-x: hidden;
     width: 100%;
+}
+
+button {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    box-shadow: 0px;
+}
+
+input {
+    appearance: none;
+    webkit-appearance: none;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -62,6 +69,15 @@ input[type="number"] {
 
     @include tablet {
         display: none !important;
+    }
+}
+
+#contenido {
+    overflow-x: hidden;
+    min-height: 100vh;
+
+    @include desktop {
+        overflow: initial;
     }
 }
 
