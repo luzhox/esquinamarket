@@ -2,7 +2,6 @@ $ = jQuery.noConflict()
 
 $(document).ready(function () {
   // Inicializar aos
-
   AOS.init()
 
   // Propiedades de scroll de menu
@@ -125,54 +124,4 @@ $(document).ready(function () {
     })
   }
   addCarousel('hero-container', 0, 1, true, 0, 1, true, true, false, true, 5000)
-
-  // owl.on('next.owl.carousel', function (event) {
-  //   var pos = parseInt($('.pageinitial').html()) + 1
-  //   if (pos < 3) {
-  //     $('.pageinitial').html(pos)
-  //   }
-  // })
-
-  // owl.on('prev.owl.carousel', function (event) {
-  //   var posEnd = parseInt($('.pageinitial').html()) - 1
-  //   if (posEnd > 0) {
-  //     $('.pageinitial').html(posEnd)
-  //   }
-  // })
-
-  $('.arrowNext').click(function () {
-    owl.trigger('next.owl.carousel')
-  })
-
-  $('.arrowPrev').click(function () {
-    owl.trigger('prev.owl.carousel', [300])
-  })
-
-  if (window.matchMedia('(max-width: 768px)').matches) {
-  } else {
-  }
-
-  // Modal de Biografia
-  $('.bio').click(function (e) {
-    var bio = e.target.parentNode.parentNode.getAttribute('id')
-    var title = $('#' + bio)
-      .find('.member__name')
-      .html()
-    var contenido = $('#' + bio)
-      .find('.member__content')
-      .html()
-    var image = $('#' + bio + ' .img').data('image')
-    var cargo = $('#' + bio)
-      .find('.member__position')
-      .html()
-    var empresa = $('#' + bio)
-      .find('.member__work')
-      .html()
-
-    $('#modalMiembro .modal-content .text h3').html(title)
-    $('#modalMiembro .modal-content .text span').html(cargo + ' - ' + empresa)
-    $('#modalMiembro .modal-content .text .contenido-bio').html(contenido)
-    document.querySelector('#modalMiembro .modal-content .imagen').style.background = 'url(' + image + `)`
-    $('#modalMiembro').addClass('active')
-  })
 })
