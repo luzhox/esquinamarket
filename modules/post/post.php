@@ -3,9 +3,7 @@ $module_post = @get_sub_field('module_post');
 
 if($module_post) {
   global $post;
-
   $post = $module_post;
-
   setup_postdata($post);
 }
 ?>
