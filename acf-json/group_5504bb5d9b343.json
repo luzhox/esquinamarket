@@ -54,7 +54,9 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "default_value": ""
+                                    "default_value": "",
+                                    "enable_opacity": false,
+                                    "return_format": "string"
                                 },
                                 {
                                     "key": "field_5f683c5000d27",
@@ -258,7 +260,9 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": ""
+                            "default_value": "",
+                            "enable_opacity": false,
+                            "return_format": "string"
                         },
                         {
                             "key": "field_605e631f4c438",
@@ -330,5 +334,6 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1616799584
+    "show_in_rest": false,
+    "modified": 1639023519
 }

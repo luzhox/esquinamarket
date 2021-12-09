@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php include('menu.php')?>
-  <?php the_field('my_blog_pe') ?>
+  <!-- <?php the_field('my_blog_pe') ?> -->
 		<?php $args = array(
 			'posts_per_page'=> 1,
             'orderby'=> 'date',

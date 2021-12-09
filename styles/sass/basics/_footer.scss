@@ -2,23 +2,18 @@
     background-color: white;
     color: $gray;
     border-top: 1px solid rgb(226, 228, 233);
-
     &__brand {
         max-width: 200px;
         margin-bottom: 40px;
-
         @include tablet {
             width: col(7, 37);
             margin-right: col(3, 37);
             margin-bottom: 0px;
         }
-
-
         img {
             width: 100%;
             height: auto;
         }
-
         p {
             font-size: 16px;
             line-height: 160%;
@@ -26,46 +21,37 @@
             margin-top: 12px;
         }
     }
-
     &__links {
         width: 100%;
-
         @include tablet {
             width: col(7, 37);
             margin-right: col(3, 37);
         }
-
-
         p {
             margin-bottom: 24px;
         }
-
         ul {
             li {
                 list-style: none;
                 margin-bottom: 16px;
-
                 a {
                     font-weight: 300;
                     font-size: 16px;
                     line-height: 160%;
                     color: $gray;
                     letter-spacing: 0.6px;
-                    font-family: $roboto;
+                    font-family: $poppins;
                 }
             }
         }
     }
-
     &__socials {
         ul {
             display: flex;
             flex-flow: wrap;
-
             li {
                 list-style: none;
                 display: inline-block;
-
                 a {
                     &[href*='facebook.com'] {
                         width: 32px;
@@ -76,7 +62,6 @@
                         justify-content: center;
                         background-color: $primary;
                         margin-right: 8px;
-
                         &::before {
                             content: '';
                             width: 20px;
@@ -85,7 +70,6 @@
                             background-size: cover;
                         }
                     }
-
                     &[href*='twitter.com'] {
                         width: 32px;
                         height: 32px;
@@ -95,7 +79,6 @@
                         justify-content: center;
                         background-color: $primary;
                         margin-right: 8px;
-
                         &::before {
                             content: '';
                             width: 20px;
@@ -104,7 +87,6 @@
                             background-size: cover;
                         }
                     }
-
                     &[href*='instagram.com'] {
                         width: 32px;
                         height: 32px;
@@ -114,7 +96,6 @@
                         justify-content: center;
                         background-color: $primary;
                         margin-right: 8px;
-
                         &::before {
                             content: '';
                             width: 20px;
@@ -123,7 +104,6 @@
                             background-size: cover;
                         }
                     }
-
                     &[href*='tiktok.com'] {
                         width: 32px;
                         height: 32px;
@@ -133,7 +113,6 @@
                         justify-content: center;
                         background-color: $primary;
                         margin-right: 8px;
-
                         &::before {
                             content: '';
                             width: 20px;
@@ -142,7 +121,6 @@
                             background-size: cover;
                         }
                     }
-
                     &[href*='pinterest.es'] {
                         width: 32px;
                         height: 32px;
@@ -152,7 +130,6 @@
                         justify-content: center;
                         background-color: $primary;
                         margin-right: 8px;
-
                         &::before {
                             content: '';
                             width: 20px;
@@ -161,7 +138,6 @@
                             background-size: cover;
                         }
                     }
-
                     &[href*='youtube.com'] {
                         width: 32px;
                         height: 32px;
@@ -172,7 +148,6 @@
                         background-color: $primary;
                         margin-right: 8px;
                         margin-bottom: 8px;
-
                         &::before {
                             content: '';
                             width: 20px;
@@ -181,7 +156,6 @@
                             background-size: cover;
                         }
                     }
-
                     &[href*='linkedin.com'] {
                         width: 32px;
                         height: 32px;
@@ -191,7 +165,6 @@
                         justify-content: center;
                         background-color: $primary;
                         margin-right: 8px;
-
                         &::before {
                             content: '';
                             width: 20px;
@@ -200,7 +173,6 @@
                             background-size: cover;
                         }
                     }
-
                     .sr-text {
                         display: none;
                     }
@@ -208,16 +180,13 @@
             }
         }
     }
-
     &__social {
         margin-bottom: 40px;
-
         .group {
             display: flex;
             flex-flow: wrap;
             width: 100%;
         }
-
         &__icon {
             width: 32px;
             height: 32px;
@@ -227,36 +196,28 @@
             justify-content: center;
             background-color: $primary;
             margin-right: 8px;
-
             svg {
                 path {
                     fill: $gray;
                 }
             }
-
             &:last-child {
                 margin-right: 0px;
             }
         }
-
         @include tablet {
             width: col(7, 37);
             margin-bottom: 0px;
             margin-right: col(3, 37);
         }
-
-
         .number {
             font-weight: 300;
             font-size: 32px;
             line-height: 140%;
             color: $gray;
-
             @include tablet {
                 font-size: 22px;
             }
-
-
             &::before {
                 content: '';
                 display: inline-block;
@@ -267,25 +228,19 @@
                 margin-right: 8px;
             }
         }
-
         .title {
             margin-bottom: 16px;
         }
-
         .call {
             margin-top: 40px;
         }
     }
-
     &__address {
         margin-bottom: 40px;
-
         @include tablet {
             width: col(7, 37);
             margin-bottom: 0px;
         }
-
-
         h3 {
             font-weight: 600;
             font-size: 18px;
@@ -294,12 +249,10 @@
             text-align: left;
             margin-bottom: 16px;
             color: $gray;
-
             @include tablet {
                 margin-bottom: 24px;
             }
         }
-
         .textwidget {
             p {
                 font-weight: 300;
@@ -309,17 +262,15 @@
                 color: $gray;
                 text-align: left;
                 letter-spacing: 0.6px;
-                font-family: $roboto;
+                font-family: $poppins;
                 margin-bottom: 24px;
             }
         }
     }
-
     .container {
         display: flex;
         flex-flow: wrap;
         padding-top: 52px;
-
         .title {
             font-weight: 600;
             font-size: 18px;
@@ -329,7 +280,6 @@
             margin-bottom: 16px;
             font-family: $primary-text;
             letter-spacing: 0.5px;
-
             @include tablet {
                 margin-bottom: 24px;
             }

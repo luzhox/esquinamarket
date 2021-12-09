@@ -5,7 +5,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<link rel="pingback" href="<?php bloginfo('pingback_url') ?>">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400|Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
 	<link rel="icon" type="image/png" href="<?php echo site_icon_url() ?>">
 	<title><?php wp_title(''); ?> <?php if(wp_title('',false)){echo':';} ?> <?php bloginfo('name') ?></title>
 	<meta name="theme-color" content="#ec6a03"/>

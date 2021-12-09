@@ -1,16 +1,19 @@
-$primary : #00aeff;
-$primary-hover : #0099ff;
-$gray:#10111A;
-$gray2 : #4C4D58;
-$gray3:#C8CADB;
-$gray4:#C4C4C4;
+$primary: #0CA64E;
+$primary-hover: #15c05f;
+$green: #0CA64E;
+$red:#FF2D4F;
+$blue:#007CC4;
+$darkGray:#121526;
+$gray:#383A3F;
+$lightgray:#F6F9FF;
 $shadow: -0px 6px 20px rgba(0, 0, 0, 0.25);
-$primary-text:'Montserrat',
+$primary-text:'Poppins',
 Arial,
 Helvetica,
 sans-serif;
-$roboto:'Roboto',
+$poppins:'Poppins',
 Arial,
 Helvetica,
 sans-serif;
+$gradient: linear-gradient(180deg, rgba(12, 166, 78, 0.8) 0%, rgba(20, 141, 180, 0.8) 100%);
 $overlay:linear-gradient(90deg, rgba(35, 28, 19, 0.6) 24.32%, rgba(47, 37, 25, 0) 100.16%);

@@ -10,7 +10,6 @@
                 background-size: cover;
                 background-repeat: no-repeat;
             }
-
             &.disabled {
                 &::before {
                     content: '';
@@ -23,7 +22,6 @@
                 }
             }
         }
-
         .owl-next {
             &::before {
                 content: '';
@@ -34,7 +32,6 @@
                 background-size: cover;
                 background-repeat: no-repeat;
             }
-
             &.disabled {
                 &::before {
                     content: '';
@@ -47,7 +44,6 @@
                 }
             }
         }
-
         .owl-nav {
             position: relative !important;
             text-align: right !important;
@@ -55,7 +51,6 @@
             max-width: 1184px !important;
             margin-left: auto !important;
             margin-right: auto !important;
-
             @include mobile {
                 top: -95px;
                 text-align: left !important;
@@ -64,7 +59,6 @@
                 width: 84%;
             }
         }
-
         .owl-prev,
         .owl-next {
             width: 48px;
@@ -72,17 +66,14 @@
             border-radius: 50% !important;
             border: 1px solid $primary !important;
             background: $primary !important;
-
             &::before {
                 position: relative;
                 top: 14px;
             }
-
             &.disabled {
                 border-color: #ffffff !important;
                 background: transparent !important;
             }
-
             span {
                 width: 48px;
                 height: 48px;
@@ -90,7 +81,6 @@
                 color: transparent;
             }
         }
-
         .hero-item {
             position: relative;
             z-index: 1;
@@ -99,7 +89,6 @@
             justify-content: center;
             align-items: center;
             flex-flow: wrap;
-
             .overlay {
                 position: absolute;
                 height: 100%;
@@ -107,7 +96,6 @@
                 z-index: -1;
                 opacity: 0.53;
             }
-
             img {
                 position: absolute;
                 z-index: -2;
@@ -115,14 +103,11 @@
                 height: 100vh;
                 width: 100%;
             }
-
             .container {
                 padding: 0;
             }
-
             &__content {
                 width: 100%;
-
                 h2 {
                     font-family: $primary-text;
                     font-style: normal;
@@ -134,28 +119,23 @@
                     margin-bottom: 32px;
                     width: col(18, 37);
                     margin-left: 0;
-
                     strong {
                         font-weight: 600;
                     }
-
                     @include mobile {
                         width: auto;
                         font-size: 32px;
                         line-height: 39px;
                         letter-spacing: -1px;
                     }
-
-
                     @media only screen and (min-width: 744px) and (max-width: 1199px) {
                         width: auto;
                         font-size: 44px;
                         line-height: 52px;
                     }
                 }
-
                 a {
-                    font-family: $roboto;
+                    font-family: $poppins;
                     font-style: normal;
                     font-weight: 600;
                     font-size: 20px;
@@ -168,7 +148,6 @@
                     display: inline-block;
                     padding: 16px 32px;
                 }
-
                 @media only screen and (min-width: 744px) and (max-width: 1199px) {
                     width: 84%;
                     max-width: 840px;
@@ -178,7 +157,6 @@
             }
         }
     }
-
     .vermas {
         position: relative;
         z-index: 1;
@@ -191,12 +169,9 @@
         right: 0;
         margin-left: auto;
         margin-right: auto;
-
         @include mobile {
             bottom: 22px;
         }
-
-
         a {
             font-family: $primary-text;
             font-style: normal;
@@ -208,7 +183,6 @@
             color: #ffffff;
             display: flex;
             align-items: center;
-
             span {
                 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='32' viewBox='0 0 21 32' fill='none'%3E%3Crect x='0.84' y='0.84' width='19.32' height='30.0533' rx='9.66' stroke='white' stroke-width='1.68'/%3E%3Crect x='9' y='5.60005' width='3' height='7.8' rx='1.5' fill='%23FCC74F'/%3E%3C/svg%3E");
                 background-size: cover;
