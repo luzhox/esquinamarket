@@ -5,7 +5,7 @@ const cssnano = require('cssnano') // https://cssnano.co/
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
-const nameProject = 'unalm'
+const nameProject = 'templatecore'
 const JS_DIR = path.resolve(__dirname, 'src')
 const BUILD_DIR = path.resolve(__dirname, 'build')
 

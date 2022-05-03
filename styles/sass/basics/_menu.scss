@@ -16,13 +16,16 @@
     align-items: center;
     justify-content: center;
     max-width: 100%;
+
     @include tablet {
         position: fixed;
+
         &.actived,
         &.active {
             background-color: white;
         }
     }
+
     .container {
         z-index: 30;
         position: relative;
@@ -30,6 +33,7 @@
         padding: 8px 0px;
         width: 100%;
         max-width: 100%;
+
         @include desktop {
             padding: 0;
             width: 100%;
@@ -41,13 +45,16 @@
             justify-content: space-between;
         }
     }
+
     &-brand {
         width: col(27, 37);
         float: left;
         padding-left: col(2, 31);
+
         @include tablet {
             padding-left: 0px;
         }
+
         @include desktop {
             width: col(7, 31);
             height: 100%;
@@ -55,8 +62,10 @@
             display: inline-block;
             vertical-align: middle;
         }
+
         &__item {
             display: inline-block;
+
             img {
                 height: 48px;
                 padding: 12px 0px;
@@ -72,6 +81,7 @@
             }
         }
     }
+
     &-nav {
         height: 0px;
         opacity: 0;
@@ -90,21 +100,25 @@
             width: col(22.5, 31);
             text-align: right;
         }
+
         .main-navegation {
             @include mobile {
                 height: 0px;
                 overflow: hidden;
             }
+
             &.active {
                 height: auto;
                 background: white;
             }
+
             ul {
                 padding-top: 10px;
                 @include tablet {
                     padding-top: 0px;
                     height: 100%;
                 }
+
                 li {
                     border-top: 1px solid $gray;
                     list-style: none;
@@ -124,8 +138,7 @@
                         &::after {
                             content: '';
                             display: block;
-                            background-image: url("data:image/svg+xml,%3Csvg width='38' height='76' viewBox='0 0 38 76' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M35.4274 44.2231L5.01194 74.7019C3.86684 75.8492 2.00876 75.851 0.861746 74.7062C-0.285559 73.5614 -0.287467 71.7033 0.857345 70.556L31.275 40.075C32.4192 38.9308 32.4192 37.069 31.2728 35.9226L0.857345 5.44378C-0.287467 4.29648 -0.285559 2.43839 0.861746 1.29358C1.43445 0.721908 2.18469 0.436226 2.93464 0.436226C3.68665 0.436226 4.43866 0.723522 5.01194 1.29798L35.4252 31.7746C38.8578 35.2073 38.8578 40.7927 35.4274 44.2231Z' fill='%23FFBC10'/%3E%3C/svg%3E%0A");
-                            width: 12px;
+                            background-image: url("data:image/svg+xml,%3Csvg width='38' height='76' viewBox='0 0 38 76' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_3)'%3E%3Cpath d='M35.4274 44.2231L5.01194 74.7019C3.86684 75.8492 2.00876 75.851 0.861746 74.7062C-0.285559 73.5614 -0.287467 71.7033 0.857345 70.556L31.275 40.075C32.4192 38.9308 32.4192 37.069 31.2728 35.9226L0.857345 5.44377C-0.287467 4.29647 -0.285559 2.43838 0.861746 1.29357C1.43445 0.7219 2.18469 0.436218 2.93464 0.436218C3.68665 0.436218 4.43866 0.723514 5.01194 1.29797L35.4252 31.7746C38.8578 35.2073 38.8578 40.7927 35.4274 44.2231Z' fill='%23004F89'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_3'%3E%3Crect width='38' height='76' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");                            width: 12px;
                             height: 17px;
                             width: 8.6px;
                             background-repeat: no-repeat;
@@ -135,11 +148,13 @@
                             right: 24px;
                             top: 24px;
                         }
+
                         &:nth-child(6) {
                             border-bottom: 1px solid $gray;
                             margin-right: 0px;
                         }
                     }
+
                     @media only screen and (max-width: 321px) {
                         padding: 8px;
                         &::after {
@@ -156,10 +171,12 @@
                             top: 20px;
                         }
                     }
+
                     @include tablet {
                         border: 0px;
                         margin-top: 10px;
                     }
+
                     a {
                         padding: 10px 0px;
                         display: inline-block;
@@ -168,6 +185,7 @@
                         line-height: 15px;
                         position: relative;
                         color: $gray;
+
                         &::before {
                             content: "";
                             width: 0%;
@@ -182,12 +200,15 @@
                             -o-transition: all 0.3s ease-in-out;
                             transition: all 0.3s ease-in-out;
                         }
+
                         @include tablet {
                             display: initial;
                             width: auto;
                         }
+
                         &:hover {
                             color: $primary;
+
                             @include tablet {
                                 &::before {
                                     width: 100%;
@@ -195,18 +216,22 @@
                             }
                         }
                     }
+
                     &.current_page_item {
                         @include tablet {
                             a {
                                 color: $primary;
+
                                 &::before {
                                     width: 100%;
                                 }
                             }
                         }
                     }
+
                     ul {
                         display: none;
+
                         li {
                             &:last-child {
                                 background-color: #fff;
@@ -217,6 +242,7 @@
                                 width: 100%;
                                 max-width: 100%;
                                 margin: 0;
+
                                 a {
                                     color: #373a4a;
                                     border: 0px;
@@ -224,7 +250,9 @@
                             }
                         }
                     }
+
                     position: relative;
+
                     &:hover {
                         @include tablet {
                             ul {
@@ -238,28 +266,34 @@
                                 border-radius: 18px;
                                 font-size: 16px;
                                 box-shadow: 0px 20px 64px rgba(111, 103, 164, 0.35);
+
                                 li {
                                     text-align: center;
                                     width: 100%;
                                     border-bottom: 1px solid lightgray;
+
                                     &:last-child {
                                         border: 0px;
                                         background: white;
+
                                         a {
                                             &:hover {
                                                 color: $primary;
                                             }
                                         }
+
                                         &:hover {
                                             box-shadow: none;
                                         }
                                     }
+
                                     a {
                                         &::before {
                                             display: none;
                                         }
                                     }
                                 }
+
                                 &::before {
                                     content: "";
                                     position: absolute;
@@ -273,28 +307,9 @@
                             }
                         }
                     }
-                    &:last-child {
-                        @include desktop {
-                            background-color: $primary;
-                            color: $gray;
-                            border-radius: 12px;
-                            font-weight: 800;
-                            &:hover {
-                                box-shadow: 0px 0px 10px $primary;
-                            }
-                            a {
-                                color: $gray;
-                                text-transform: uppercase;
-                                font-weight: 700;
-                                padding: 16px 32px;
-                                border-radius: 8px;
-                                font-size: 12px;
-                                line-height: 15px;
-                            }
-                        }
-                    }
                 }
             }
+
             @include tablet {
                 ul {
                     li {
@@ -302,11 +317,13 @@
                         text-align: left;
                         padding: 0px !important;
                         color: $gray;
+
                         @include tablet {
                             display: inline-block;
                             margin: 0;
                             margin-right: 32px;
                         }
+
                         a {
                             padding: 20px 0px;
                             display: inline-block;
@@ -315,6 +332,7 @@
                             text-transform: uppercase;
                             font-weight: 500;
                             transition: ease-in-out 0.3s all;
+
                             @include tablet {
                                 display: block;
                                 width: auto;
@@ -324,6 +342,7 @@
                 }
             }
         }
+
         &.active {
             width: 100%;
             margin-top: 70px;
@@ -332,13 +351,16 @@
             opacity: 1;
             text-align: center;
             z-index: 80;
+
             .main-navegation {
                 height: auto;
+
                 @include mobile {
                     height: 100vh;
                     background: white;
                 }
             }
+
             nav {
                 div {
                     ul {
@@ -353,6 +375,7 @@
                 }
             }
         }
+
         &.open-submenu {
             .menu {
                 @include mobile {
@@ -371,6 +394,7 @@
             }
         }
     }
+
     &-sandwich {
         float: right;
         text-align: right;
@@ -387,6 +411,7 @@
             color: $primary;
             transition: ease-in-out 0.3s;
         }
+
         .menu {
             height: 2px;
             width: 22px;
@@ -398,12 +423,15 @@
             -ms-transition: all 0.3s ease-in-out;
             -o-transition: all 0.3s ease-in-out;
             transition: all 0.3s ease-in-out;
+
             &-3 {
                 margin: 0;
             }
         }
+
         &.active {
             padding-top: -10px;
+
             .menu {
                 &-1 {
                     -webkit-transform: rotate(45deg);
@@ -413,9 +441,11 @@
                     -ms-transform-origin: 0% 90%;
                     transform-origin: 0% 90%;
                 }
+
                 &-2 {
                     opacity: 0;
                 }
+
                 &-3 {
                     -webkit-transform: rotate(-45deg);
                     -ms-transform: rotate(-45deg);
@@ -427,86 +457,107 @@
             }
         }
     }
+
     @include desktop {
         &.active {
             height: 70px;
             background: $primary;
+
             .container {
                 max-width: 95%;
+
                 .site-header-brand__item {
                     display: inline-block;
+
                     img {
                         height: 70px !important;
                         margin-top: 0px;
                     }
                 }
+
                 .site-header-nav {
                     margin-top: 15px;
                 }
             }
         }
+
         &.actived,
         &.active {
             p {
                 color: $gray;
             }
+
             height: 70px;
             background: white;
             box-shadow: 0 5px 40px #dfdfdf;
+
             .site-header-brand {
                 padding-bottom: 0px;
             }
+
             .site-header-nav {
                 display: flex !important;
                 align-items: center !important;
                 justify-content: flex-end;
             }
+
             svg {
                 padding: 0;
                 height: auto !important;
                 margin: 0;
                 position: relative;
                 top: -5px;
+
                 path {
-                    fill: orange;
+                    fill: $primary;
                 }
             }
+
             .phone-contact {
                 a {
-                    color: #FFC600;
+                    color: $primary;
                 }
+
                 svg {
                     top: 0px;
                     margin-right: 8px;
                 }
             }
+
             li a {
                 color: $gray !important;
             }
+
             .container {
                 max-width: 1184px;
+
                 @include tablet {
                     padding: 0;
                 }
+
                 .site-header-brand__item {
                     display: inline-block;
                 }
             }
         }
     }
+
     @media only screen and (max-width: 1199px) {
+
         &.actived,
         &.active {
             background-color: #fff;
+
             .site-header-brand {
                 svg {
                     path {
-                        fill: #FFC600;
+                        fill: $primary;
                     }
                 }
             }
         }
     }
+
     .overlay {
         width: 100%;
         height: 100%;
