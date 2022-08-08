@@ -1,0 +1,51 @@
+.frase {
+  position: relative;
+  background: #f5f9ff;
+  z-index: 9;
+
+  @include mobile {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    background: $primary;
+  }
+
+  &__top {
+    width: 100%;
+    display: block;
+
+    @include tablet {
+      position: absolute;
+      top: -7.1vh;
+      left: 0;
+    }
+  }
+
+  &__bottom {
+    width: 100%;
+    display: block;
+
+    @include tablet {
+      position: absolute;
+      bottom: -7.1vh;
+      left: 0;
+    }
+  }
+
+  .container {
+    color: white;
+
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 24px;
+
+    @include tablet {
+      font-size: 28px;
+      padding-top: 64px;
+      padding-bottom: 64px;
+    }
+  }
+}

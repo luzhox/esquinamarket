@@ -1,14 +1,56 @@
-$primary: #065A98;
-$primary-hover: #0668ad;
+$basepath:'https://esquinamarket.hadronica.pe/wp-content/themes/esquina/build/font';
+
+@font-face {
+  font-family: 'Mark';
+  src: url($basepath+'Mark-Light.eot');
+  src: local('Mark-Light'),
+    url($basepath+'Mark-Light.eot?#iefix') format('embedded-opentype'),
+    url($basepath+'Mark-Light.woff2') format('woff2'),
+    url($basepath+'Mark-Light.woff') format('woff'),
+    url($basepath+'Mark-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'Mark';
+  src: url($basepath+'Mark-Bold.eot');
+  src: local('Mark-Bold'),
+    url($basepath+'Mark-Bold.eot?#iefix') format('embedded-opentype'),
+    url($basepath+'Mark-Bold.woff2') format('woff2'),
+    url($basepath+'Mark-Bold.woff') format('woff'),
+    url($basepath+'Mark-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Mark';
+  src: url($basepath+'Mark-Regular.eot');
+  src: local('Mark-Regular'),
+    url($basepath+'Mark-Regular.eot?#iefix') format('embedded-opentype'),
+    url($basepath+'Mark-Regular.woff2') format('woff2'),
+    url($basepath+'Mark-Regular.woff') format('woff'),
+    url($basepath+'Mark-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+$primary: #F94E0B;
+$primary-hover: #f9640e;
 $color-primary-text-button:white;
 $gray:#383A3F;
+$darkGray:#002232;
 $lightgray:#F6F9FF;
 $shadow: -0px 6px 20px rgba(0, 0, 0, 0.25);
-$primary-text:'Poppins',
+$primary-text:'Mark',
 Arial,
 Helvetica,
 sans-serif;
-$poppins:'Poppins',
+$poppins:'Mark',
 Arial,
 Helvetica,
 sans-serif;

@@ -5,6 +5,7 @@
 
 $breakpoint-tablet: 744px;
 $breakpoint-desktop: 1240px;
+
 /// Show only on desktop screens
 @mixin desktop {
     @media only screen and (min-width: $breakpoint-desktop) {
@@ -33,10 +34,11 @@ $breakpoint-desktop: 1240px;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     overflow: initial;
+
     // @include clearfix;
     @include tablet {
-        padding: 0 col(1, 37);
-        max-width: 1184px;
+        padding: 0 col(1, 31);
+        max-width: 1240px;
         box-sizing: border-box;
     }
 }

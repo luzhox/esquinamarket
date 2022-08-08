@@ -1,0 +1,90 @@
+.header-landing {
+  height: 470px;
+  width: 100%;
+  margin-top: 100px;
+  background-size: cover !important;
+  background-position: center !important;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  @include tablet {
+    margin-top: 148px;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.68) 11.23%, rgba(0, 0, 0, 0) 100%);
+
+    @include tablet {
+      background: linear-gradient(92.34deg, rgba(0, 0, 0, 0.68) 11.23%, rgba(0, 0, 0, 0) 55.62%);
+
+    }
+  }
+
+  &__brand {
+    img {
+      height: 66px;
+      width: auto;
+    }
+  }
+
+  &__text {
+    margin-top: 18px;
+
+    @include tablet {
+      width: col(10, 31);
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 120%;
+      color: white;
+
+      @include tablet {
+        font-size: 24px;
+      }
+
+    }
+
+    h3,
+    h4,
+    h5,
+    h6,
+    h2 {
+      font-size: 32px;
+      line-height: 120%;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: white;
+
+      @include tablet {
+        font-size: 40px;
+        line-height: 44px;
+      }
+
+      strong {
+        font-weight: 600;
+      }
+
+      em {
+        font-size: 32px;
+        line-height: 30px;
+        font-weight: 600;
+        font-style: normal;
+        color: $primary;
+
+      }
+    }
+  }
+}

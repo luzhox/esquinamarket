@@ -1,0 +1,83 @@
+.header-nosotros {
+  margin-top: 100px;
+  position: relative;
+  min-height: 550px;
+  display: flex;
+  align-items: center;
+  flex-flow: wrap-reverse;
+
+  @include tablet {
+    flex-flow: wrap;
+    margin-top: 130px;
+  }
+
+  .container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  &__text {
+    width: 100%;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    @include tablet {
+      padding-top: 0px;
+      padding-bottom: 0px;
+      width: col(16, 37);
+    }
+
+    @media only screen and (min-width: 1600px) {
+      width: col(24, 37);
+
+    }
+
+    h3,
+    h4,
+    h5,
+    h6,
+    h2 {
+      font-size: 32px;
+      line-height: 30px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: $primary;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 140%;
+    }
+
+    &__brand {
+      margin-top: 24px;
+      height: 50px;
+      display: flex;
+      gap: 16px;
+
+      img {
+        height: 100%;
+        display: inline-block;
+        width: auto;
+      }
+    }
+  }
+
+  &__img {
+
+    background-size: cover !important;
+    background-position: top center !important;
+    min-height: 350px;
+    width: 100%;
+
+    @include tablet {
+      max-width: 700px;
+      position: absolute;
+      min-height: 550px;
+      right: 0;
+      top: 0;
+      width: 49.6vw;
+    }
+  }
+
+}

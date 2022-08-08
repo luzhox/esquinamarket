@@ -1,0 +1,94 @@
+.pizzas-products {
+  background-size: cover !important;
+  background-position: center !important;
+
+  .container {
+
+    @include mobile {
+      padding-top: 48px;
+      padding-bottom: 48px;
+    }
+  }
+
+  @include tablet {
+    min-height: 568px;
+
+    .container {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 32px;
+
+    @include tablet {
+      margin-bottom: 44px;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6,
+    h2 {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 130%;
+      color: white;
+
+      @include tablet {
+        font-size: 40px;
+      }
+
+      strong {
+        color: $primary;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 24px;
+
+    &__item {
+      width: col(31, 31);
+      text-align: center;
+
+      @include tablet {
+        width: col(7, 31);
+      }
+
+      .btn__primary {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          margin-left: 8px;
+        }
+      }
+
+      p {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 35px;
+        text-align: center;
+        letter-spacing: -0.6px;
+        color: white;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        display: block;
+      }
+
+      &__img {
+        height: 224px;
+        background-size: cover !important;
+        background-position: center !important;
+      }
+    }
+  }
+}

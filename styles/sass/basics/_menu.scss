@@ -5,17 +5,24 @@
     top: 0;
     z-index: 9999999;
     margin-top: 00px;
+    background: white;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background: transparent;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
     max-width: 100%;
+    z-index: 999;
+    border-bottom: 1px solid rgba(137, 130, 184, 0.271);
+
+    @include mobile {
+        box-shadow: 0px 0px 40px $lightgray;
+
+    }
 
     @include tablet {
         position: fixed;
@@ -23,21 +30,31 @@
         &.actived,
         &.active {
             background-color: white;
+            box-shadow: 0px 20px 64px rgba(111, 103, 164, 0.35) !important;
+
         }
     }
 
     .container {
         z-index: 30;
         position: relative;
-        min-height: 75px;
+        min-height: 101px;
         padding: 8px 0px;
         width: 100%;
         max-width: 100%;
 
+        @include mobile {
+            align-items: center;
+            display: flex;
+            flex-flow: wrap;
+            justify-content: space-between;
+
+        }
+
         @include desktop {
             padding: 0;
             width: 100%;
-            max-width: 1184px;
+            max-width: 1240px;
             margin: 0 auto;
             display: flex;
             flex-flow: wrap;
@@ -67,14 +84,17 @@
             display: inline-block;
 
             img {
-                height: 48px;
-                padding: 12px 0px;
+                height: 78px;
+                padding: 0px;
+
                 @include tablet {
-                    height: 74px;
+                    height: 125px;
+                    padding: 6px 0px;
                     margin-left: 20px;
                 }
+
                 @include desktop {
-                    height: 74px;
+                    height: 125px;
                     margin-left: 0px;
                     width: auto;
                 }
@@ -90,6 +110,7 @@
         clear: both;
         transition: ease-in-out 0.3s;
         margin-top: 10px;
+
         @include desktop {
             clear: initial;
             height: 100%;
@@ -114,6 +135,7 @@
 
             ul {
                 padding-top: 10px;
+
                 @include tablet {
                     padding-top: 0px;
                     height: 100%;
@@ -127,18 +149,22 @@
                     transition: ease-in-out 0.3s all;
                     border-left: 1px solid $gray;
                     border-right: 1px solid $gray;
+
                     &:nth-child(6) {
                         margin-right: 16px;
                     }
+
                     @include mobile {
                         border-top: 1px solid $gray;
                         padding: 16px;
                         text-align: left;
                         position: relative;
+
                         &::after {
                             content: '';
                             display: block;
-                            background-image: url("data:image/svg+xml,%3Csvg width='38' height='76' viewBox='0 0 38 76' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_3)'%3E%3Cpath d='M35.4274 44.2231L5.01194 74.7019C3.86684 75.8492 2.00876 75.851 0.861746 74.7062C-0.285559 73.5614 -0.287467 71.7033 0.857345 70.556L31.275 40.075C32.4192 38.9308 32.4192 37.069 31.2728 35.9226L0.857345 5.44377C-0.287467 4.29647 -0.285559 2.43838 0.861746 1.29357C1.43445 0.7219 2.18469 0.436218 2.93464 0.436218C3.68665 0.436218 4.43866 0.723514 5.01194 1.29797L35.4252 31.7746C38.8578 35.2073 38.8578 40.7927 35.4274 44.2231Z' fill='%23004F89'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_3'%3E%3Crect width='38' height='76' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");                            width: 12px;
+                            background-image: url("data:image/svg+xml,%3Csvg width='38' height='76' viewBox='0 0 38 76' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1004_45)'%3E%3Cpath d='M35.4274 44.223L5.01194 74.7018C3.86684 75.8491 2.00876 75.8509 0.861746 74.7061C-0.285559 73.5613 -0.287467 71.7032 0.857345 70.5559L31.275 40.0749C32.4192 38.9307 32.4192 37.0689 31.2728 35.9225L0.857345 5.44371C-0.287467 4.29641 -0.285559 2.43832 0.861746 1.29351C1.43445 0.721839 2.18469 0.436157 2.93464 0.436157C3.68665 0.436157 4.43866 0.723453 5.01194 1.29791L35.4252 31.7745C38.8578 35.2072 38.8578 40.7926 35.4274 44.223Z' fill='%23F94E0B'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1004_45'%3E%3Crect width='38' height='76' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+                            width: 12px;
                             height: 17px;
                             width: 8.6px;
                             background-repeat: no-repeat;
@@ -157,6 +183,7 @@
 
                     @media only screen and (max-width: 321px) {
                         padding: 8px;
+
                         &::after {
                             content: '';
                             display: block;
@@ -254,6 +281,32 @@
                     position: relative;
 
                     &:hover {
+                        @include mobile {
+                            ul {
+                                display: block;
+
+                                li {
+                                    border: 0px;
+                                    text-align: left;
+
+                                    padding: 0px;
+                                    padding-bottom: 12px;
+                                    padding-top: 12px;
+                                    width: 100%;
+
+                                    &::after {
+                                        display: none;
+                                    }
+
+                                    a {
+                                        padding: 0px;
+
+                                    }
+                                }
+                            }
+                        }
+
+
                         @include tablet {
                             ul {
                                 display: block;
@@ -307,6 +360,70 @@
                             }
                         }
                     }
+
+                    &.addDelivery {
+                        @include desktop {
+                            margin-left: 24px;
+                        }
+
+                        a {
+
+
+                            @include desktop {
+                                background: $primary;
+                                color: white;
+                                padding: 8px 24px !important;
+                                border-radius: 8px;
+                                font-weight: 700;
+                                font-size: 16px;
+                                line-height: 156%;
+                                display: flex;
+                                align-items: flex-start;
+                                gap: 12px;
+                                margin-left: 24px;
+                                width: 100%;
+                                margin: 0;
+
+                                &::after {
+                                    content: '';
+                                    width: 28px;
+                                    height: 28px;
+                                    display: inline-block;
+                                    background-image: url("data:image/svg+xml,%3Csvg width='28' height='29' viewBox='0 0 28 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23.9093 4.91223C22.6199 3.61081 21.0843 2.57903 19.392 1.87703C17.6998 1.17503 15.8848 0.816836 14.0527 0.823329C6.37594 0.823329 0.119538 7.07797 0.112506 14.7565C0.112506 17.2158 0.755901 19.6084 1.97062 21.7266L0 28.9499L7.39025 27.0127C9.43471 28.1253 11.7251 28.7085 14.0527 28.7091H14.0598C21.7383 28.7091 27.993 22.4544 28 14.7688C28.0018 12.9372 27.6411 11.1233 26.9387 9.4316C26.2363 7.73995 25.2062 6.20399 23.9076 4.91223H23.9093ZM14.0527 26.3499C11.9766 26.3506 9.9387 25.792 8.15319 24.7327L7.73129 24.4795L3.34706 25.6292L4.51783 21.3522L4.2436 20.911C3.08304 19.0657 2.46924 16.9293 2.47338 14.7495C2.47338 8.37531 7.67152 3.17541 14.0598 3.17541C15.5817 3.17268 17.089 3.47122 18.495 4.05383C19.901 4.63643 21.1777 5.49156 22.2516 6.56994C23.3293 7.64411 24.1836 8.92101 24.7653 10.327C25.347 11.733 25.6446 13.2402 25.6409 14.7618C25.6338 21.1588 20.4357 26.3499 14.0527 26.3499V26.3499ZM20.4076 17.6764C20.0613 17.5024 18.3508 16.6603 18.0291 16.5408C17.7092 16.4265 17.4754 16.3668 17.2469 16.7148C17.0131 17.0611 16.345 17.8504 16.1446 18.0772C15.9442 18.311 15.7368 18.3374 15.3887 18.1651C15.0424 17.9893 13.9191 17.6237 12.5902 16.4336C11.553 15.5107 10.8586 14.368 10.6512 14.0217C10.4508 13.6737 10.6318 13.4873 10.8059 13.3133C10.9588 13.1586 11.1522 12.9054 11.3262 12.705C11.502 12.5046 11.56 12.357 11.6743 12.1249C11.7885 11.8894 11.7341 11.689 11.6479 11.5149C11.56 11.3409 10.8656 9.62343 10.5721 8.93081C10.2908 8.24698 10.0043 8.34191 9.7898 8.33312C9.5894 8.32081 9.3556 8.32081 9.1218 8.32081C8.94524 8.3252 8.77149 8.36604 8.61146 8.44076C8.45144 8.51548 8.30858 8.62247 8.19186 8.75502C7.87192 9.10308 6.97715 9.94512 6.97715 11.6626C6.97715 13.3801 8.22526 15.0308 8.40105 15.2646C8.57333 15.4984 10.8516 19.0124 14.3481 20.5242C15.1743 20.8846 15.8247 21.0973 16.3327 21.259C17.1678 21.5262 17.9219 21.4858 18.5231 21.3997C19.1911 21.2977 20.5816 20.5559 20.8752 19.742C21.1635 18.9263 21.1635 18.2302 21.0756 18.0842C20.9894 17.9366 20.7556 17.8504 20.4076 17.6764V17.6764Z' fill='white'/%3E%3C/svg%3E%0A");
+                                }
+
+                                &:hover {
+                                    &::before {
+                                        display: none;
+                                    }
+                                }
+                            }
+
+
+                        }
+
+                        ul {
+                            left: -7%;
+                        }
+
+                        ul li a {
+                            background: transparent;
+                            color: $gray;
+                            padding: 8px 12px !important;
+
+                            @include tablet {
+                                text-align: left;
+                            }
+
+                            &::after {
+                                display: none;
+                            }
+
+                            &:hover {
+                                color: $primary;
+                            }
+                        }
+                    }
                 }
             }
 
@@ -317,6 +434,23 @@
                         text-align: left;
                         padding: 0px !important;
                         color: $gray;
+
+                        &.bigmenu {
+                            position: relative;
+
+                            &::after {
+                                content: '';
+                                width: 16px;
+                                height: 11px;
+                                background-image: url("data:image/svg+xml,%3Csvg width='16' height='11' viewBox='0 0 16 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.00118 3.43238C0.435803 2.82102 0.435803 1.87762 1.00118 1.26626C1.63265 0.583447 2.71199 0.583447 3.34345 1.26626L6.53123 4.71327C7.32295 5.56937 8.6762 5.56937 9.46792 4.71327L12.6557 1.26626C13.2872 0.583447 14.3665 0.583447 14.998 1.26626C15.5634 1.87762 15.5634 2.82102 14.998 3.43238L9.46792 9.41213C8.6762 10.2682 7.32295 10.2682 6.53123 9.41213L1.00118 3.43238Z' fill='%23F94E0B'/%3E%3C/svg%3E");
+                                display: inline-block;
+                                margin-left: 4px;
+                                position: absolute;
+                                right: -24px;
+                                top: 24px;
+                            }
+
+                        }
 
                         @include tablet {
                             display: inline-block;
@@ -329,9 +463,10 @@
                             display: inline-block;
                             width: 100%;
                             color: $gray;
-                            text-transform: uppercase;
                             font-weight: 500;
                             transition: ease-in-out 0.3s all;
+
+
 
                             @include tablet {
                                 display: block;
@@ -352,6 +487,10 @@
             text-align: center;
             z-index: 80;
 
+            @include mobile {
+                margin-top: 0px;
+            }
+
             .main-navegation {
                 height: auto;
 
@@ -365,8 +504,10 @@
                 div {
                     ul {
                         padding-bottom: 20px;
+
                         li {
-                            border-top: 1px solid $gray;
+                            border-top: 1px solid rgb(219, 216, 237);
+
                             @include tablet {
                                 border: 0px;
                             }
@@ -381,6 +522,7 @@
                 @include mobile {
                     position: relative;
                     right: 100%;
+
                     .sub-menu {
                         display: block;
                         position: fixed;
@@ -398,15 +540,18 @@
     &-sandwich {
         float: right;
         text-align: right;
-        padding-top: 20px;
+        padding-top: 0px;
         transition: ease-in-out 0.3s;
         padding-right: 18px;
+
         @include tablet {
             padding-right: col(1, 31);
         }
+
         @include desktop {
             display: none;
         }
+
         a {
             color: $primary;
             transition: ease-in-out 0.3s;
@@ -460,7 +605,6 @@
 
     @include desktop {
         &.active {
-            height: 70px;
             background: $primary;
 
             .container {
@@ -487,9 +631,7 @@
                 color: $gray;
             }
 
-            height: 70px;
             background: white;
-            box-shadow: 0 5px 40px #dfdfdf;
 
             .site-header-brand {
                 padding-bottom: 0px;
@@ -529,7 +671,7 @@
             }
 
             .container {
-                max-width: 1184px;
+                max-width: 1240px;
 
                 @include tablet {
                     padding: 0;

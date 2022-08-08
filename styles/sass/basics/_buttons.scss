@@ -1,8 +1,10 @@
 .btn {
-    padding: 16px 48px;
+    padding: 8px 24px;
     border-radius: 8px;
     display: inline-block;
     font-size: 18px;
+    line-height: 156%;
+    font-weight: 600;
     transition: ease-in-out .3s all;
     -webkit-transition: ease-in-out .3s all;
     -moz-transition: ease-in-out .3s all;
@@ -13,11 +15,8 @@
         @extend .btn;
         background-color: $primary;
         color: white;
-        font-size: 18px;
-        line-height: 156%;
-        text-transform: uppercase;
-        font-weight: 800;
         letter-spacing: 0.6px;
+        border: 1px solid $primary;
 
         &:hover {
             background: $primary-hover;
@@ -26,13 +25,8 @@
         &--border {
             @extend .btn;
             background: transparent;
-            border: 1px solid $primary;
-            color: $primary;
-
-            &:hover {
-                border: 1px solid $primary-hover;
-                color: $primary-hover;
-            }
+            border: 1px solid white;
+            color: white;
         }
     }
 }
