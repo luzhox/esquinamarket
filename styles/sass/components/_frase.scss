@@ -1,6 +1,6 @@
 .frase {
   position: relative;
-  background: #f5f9ff;
+  background: transparent;
   z-index: 9;
 
   @include mobile {
@@ -15,8 +15,22 @@
   &__top {
     width: 100%;
     display: block;
+    position: relative;
+    top: 1px;
 
     @include tablet {
+      position: absolute;
+      top: -2vh;
+      left: 0;
+    }
+
+    @media only screen and (min-width: 1000px) {
+      position: absolute;
+      top: -4.1vh;
+      left: 0;
+    }
+
+    @include desktop {
       position: absolute;
       top: -7.1vh;
       left: 0;
@@ -27,8 +41,23 @@
     width: 100%;
     display: block;
 
+    position: relative;
+    bottom: 1px;
+
     @include tablet {
       position: absolute;
+      bottom: -2vh;
+      left: 0;
+    }
+
+    @media only screen and (min-width: 1000px) {
+      position: absolute;
+      bottom: -4.5vh;
+      left: 0;
+    }
+
+    @include desktop {
+
       bottom: -7.1vh;
       left: 0;
     }

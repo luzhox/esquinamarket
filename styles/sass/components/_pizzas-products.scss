@@ -10,7 +10,7 @@
     }
   }
 
-  @include tablet {
+  @include desktop {
     min-height: 568px;
 
     .container {
@@ -59,6 +59,11 @@
       text-align: center;
 
       @include tablet {
+        min-width: 280px;
+        width: auto;
+      }
+
+      @include desktop {
         width: col(7, 31);
       }
 

@@ -9,7 +9,12 @@
   position: relative;
 
   @include tablet {
-    margin-top: 148px;
+    margin-top: 112px;
+
+  }
+
+  @include desktop {
+    margin-top: 130px;
   }
 
   .container {

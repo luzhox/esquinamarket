@@ -14,9 +14,9 @@
                   the_row(); ?>
                   <a class="contact-carousel__content__menu__item <?php
                     $isGray = get_sub_field('isActive');
-                    if ($isGray) : ?> active <?php endif; ?>" href="#link<?php the_sub_field('id') ?>" data-id="<?php the_sub_field('id') ?>" data-img="<?php the_sub_field('img') ?>">
+                    if ($isGray) : ?> active <?php endif; ?>" href="#link<?php the_sub_field('id') ?>"  data-id="<?php the_sub_field('id') ?>" data-img="<?php the_sub_field('img') ?>">
                   <?php the_sub_field('btnText') ?>
-              </a>
+                    </a>
                   <?php }} ?>
       </div>
       <div class="contact-carousel__content__info owl-carousel owl-theme">
@@ -61,8 +61,9 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function(){
-    $('.contact-carousel__content__menu__item').click(function(){
+    $('.contact-carousel__content__menu__item').click(function(e){
       const img = $(this).data('img');
+      $('.contact-carousel__content__menu').scrollLeft($(this).position().left);
       $(this).addClass('active')
       $(this).siblings().removeClass('active')
       $('.contactImg').css('background-image', `url(${img})`);

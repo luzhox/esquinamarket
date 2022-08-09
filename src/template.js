@@ -16,8 +16,8 @@ $(document).ready(function () {
         $('#masthead').css('top', '0')
         $('#brand').attr('src', $('#brand').data('brand'))
       } else {
-        // $('#masthead').css('top', '-125px')
-        // prevScrollpos = currentScrollPos
+        $('#masthead').css('top', '-130px')
+        prevScrollpos = currentScrollPos
       }
     } else {
       const brand = $('#brand').data('brand')
@@ -86,7 +86,6 @@ $(document).ready(function () {
     }
     if (document.getElementsByClassName('about-us__counters')[0]) {
       createObserver(document.getElementById('valuesBrand'))
-
       createObserver(document.getElementsByClassName('about-us__counters')[0])
     }
   })
@@ -99,7 +98,7 @@ $(document).ready(function () {
       $('#brand').attr('src', brandtwo)
     } else if ($('.site-header').hasClass('actived')) {
       $('#masthead').toggleClass('active')
-      const brand = ' /wp-content/uploads/2021/06/logo-color.png'
+      const brand = $('#brand').data('brand')
       $('#brand').attr('src', brand)
     } else {
       const brand = $('#brand').data('brand')

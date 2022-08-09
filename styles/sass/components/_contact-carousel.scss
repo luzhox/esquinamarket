@@ -81,9 +81,30 @@
 
       &__text {
         padding: 12px 20px;
-        max-height: 283px;
+        max-height: 230px;
         overflow-y: auto;
 
+        &::-webkit-scrollbar {
+          -webkit-appearance: none;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: $primary;
+          background-clip: padding-box;
+          border-radius: 20px;
+          border: 1px solid $primary;
+        }
+
+        &::-webkit-scrollbar:vertical {
+          width: 12px;
+        }
+
+        &::-webkit-scrollbar-track {
+          border-radius: 10px;
+          box-shadow: inset 0 0 0px rgba(0, 0, 0, 1);
+          -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 1);
+          background: rgba(225, 222, 251, 0.7);
+        }
       }
 
       &__item {
@@ -193,6 +214,8 @@
       display: flex;
       align-items: center;
       gap: 12px;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
 
       &::-webkit-scrollbar {
         -webkit-appearance: none;
@@ -236,6 +259,9 @@
         background: #FADED7;
         border-radius: 12px;
         min-width: 128px;
+        appearance: none;
+        -webkit-appearance: none;
+        scroll-snap-align: start;
 
         @include desktop {
           font-size: 14px;

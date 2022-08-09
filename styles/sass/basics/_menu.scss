@@ -43,13 +43,15 @@
         width: 100%;
         max-width: 100%;
 
-        @include mobile {
+        @include hybrid {
             align-items: center;
             display: flex;
             flex-flow: wrap;
             justify-content: space-between;
 
         }
+
+
 
         @include desktop {
             padding: 0;
@@ -87,15 +89,22 @@
                 height: 78px;
                 padding: 0px;
 
-                @include tablet {
-                    height: 125px;
+
+                @include hybrid {
+                    height: 80px;
                     padding: 6px 0px;
                     margin-left: 20px;
+                }
+
+                @include mobile {
+                    margin-left: 0px;
+                    height: 90px;
                 }
 
                 @include desktop {
                     height: 125px;
                     margin-left: 0px;
+                    padding: 4px;
                     width: auto;
                 }
             }
@@ -110,6 +119,11 @@
         clear: both;
         transition: ease-in-out 0.3s;
         margin-top: 10px;
+
+        @include hybrid {
+            width: 100%;
+            overflow: hidden;
+        }
 
         @include desktop {
             clear: initial;
@@ -136,7 +150,7 @@
             ul {
                 padding-top: 10px;
 
-                @include tablet {
+                @include desktop {
                     padding-top: 0px;
                     height: 100%;
                 }
@@ -154,7 +168,7 @@
                         margin-right: 16px;
                     }
 
-                    @include mobile {
+                    @include hybrid {
                         border-top: 1px solid $gray;
                         padding: 16px;
                         text-align: left;
@@ -199,7 +213,7 @@
                         }
                     }
 
-                    @include tablet {
+                    @include desktop {
                         border: 0px;
                         margin-top: 10px;
                     }
@@ -228,7 +242,7 @@
                             transition: all 0.3s ease-in-out;
                         }
 
-                        @include tablet {
+                        @include desktop {
                             display: initial;
                             width: auto;
                         }
@@ -236,7 +250,7 @@
                         &:hover {
                             color: $primary;
 
-                            @include tablet {
+                            @include desktop {
                                 &::before {
                                     width: 100%;
                                 }
@@ -245,7 +259,7 @@
                     }
 
                     &.current_page_item {
-                        @include tablet {
+                        @include desktop {
                             a {
                                 color: $primary;
 
@@ -281,7 +295,7 @@
                     position: relative;
 
                     &:hover {
-                        @include mobile {
+                        @include hybrid {
                             ul {
                                 display: block;
 
@@ -307,7 +321,7 @@
                         }
 
 
-                        @include tablet {
+                        @include desktop {
                             ul {
                                 display: block;
                                 position: absolute;
@@ -371,7 +385,7 @@
 
                             @include desktop {
                                 background: $primary;
-                                color: white;
+                                color: white !important;
                                 padding: 8px 24px !important;
                                 border-radius: 8px;
                                 font-weight: 700;
@@ -427,7 +441,7 @@
                 }
             }
 
-            @include tablet {
+            @include desktop {
                 ul {
                     li {
                         list-style: none;
