@@ -1,4 +1,4 @@
-<section class="hero">
+<section class="hero" data-aos="fade-in">
     <?php $isVideo = get_sub_field('isVideo');if ((!$isVideo)) : ?>
     <article class="hero-container owl-carousel owl-theme">
         <?php if (have_rows('sliderhero')) {

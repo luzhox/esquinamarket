@@ -1,4 +1,4 @@
-<div class="frase">
+<div class="frase" data-aos="fade-up">
 <svg class="frase__top" viewBox="0 0 1446 58" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0 57.614L1446 57.6141L1446 0.614262C1395.81 15.8142 1234.8 30.1697 1160.56 35.4474C870.737 75.9806 266.093 29.114 4.98309e-06 0.614135L0 57.614Z" fill="#F94E0B"/>
 </svg>

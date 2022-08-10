@@ -1,4 +1,4 @@
-$basepath:'https://esquinamarket.hadronica.pe//wp-content/themes/esquinamarket/styles/font/';
+$basepath:'https://esquinamarket.hadronica.pe/wp-content/themes/esquinamarket/styles/font/';
 
 @font-face {
   font-family: 'Mark';
@@ -12,8 +12,6 @@ $basepath:'https://esquinamarket.hadronica.pe//wp-content/themes/esquinamarket/s
   font-style: normal;
 }
 
-
-
 @font-face {
   font-family: 'Mark';
   src: url($basepath+'Mark-Bold.eot');
@@ -26,6 +24,15 @@ $basepath:'https://esquinamarket.hadronica.pe//wp-content/themes/esquinamarket/s
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Crowd Funded';
+  src: url($basepath+'1662-font.eot');
+  src: url($basepath+'1662-font.eot?#iefix') format('embedded-opentype'),
+    url($basepath+'1662-font.woff2') format('woff2'),
+    url($basepath+'1662-font.woff') format('woff'),
+    url($basepath+'1662-font.ttf') format('truetype'),
+    url($basepath+'1662-font.svg#Crowd Funded') format('svg');
+}
 
 @font-face {
   font-family: 'Mark';
@@ -38,6 +45,7 @@ $basepath:'https://esquinamarket.hadronica.pe//wp-content/themes/esquinamarket/s
   font-weight: 400;
   font-style: normal;
 }
+
 
 $primary: #F94E0B;
 $primary-hover: #f9640e;

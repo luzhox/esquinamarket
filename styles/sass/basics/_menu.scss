@@ -416,6 +416,16 @@
 
                         }
 
+                        .sub-menu {
+                            a {
+                                color: $gray !important;
+
+                                &:hover {
+                                    color: $primary !important;
+                                }
+                            }
+                        }
+
                         ul {
                             left: -7%;
                         }

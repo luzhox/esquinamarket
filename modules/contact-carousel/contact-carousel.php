@@ -1,4 +1,4 @@
-<div class="contact-carousel <?php
+<div data-aos="fade-in" class="contact-carousel <?php
                     $isGray = get_sub_field('isGray');
                     if ($isGray) : ?> gray <?php endif; ?>  <?php
                     $isFirstSection = get_sub_field('isFirstSection');
@@ -35,10 +35,22 @@
                       <p><?php the_sub_field('text') ?></p>
                       <div class="socials">
                       <?php
+                    $isFirstFace = get_sub_field('face');
+                    if ($isFirstFace) : ?>
+                      <a href="<?php the_sub_field('face')?>" class="btn__primary">Seguir</a>
+                      <?php endif; ?>
+                      <?php
+                    $isFirstInsta = get_sub_field('insta');
+                    if ($isFirstInsta) : ?>
+                      <a href="<?php the_sub_field('insta')?>" class="btn__primary">Seguir</a>
+                      <?php endif; ?>
+
+                      <?php
                     $isFirstWhatsp = get_sub_field('whastapp');
                     if ($isFirstWhatsp) : ?>
                       <a href="https://api.whatsapp.com/send/?phone=51<?php the_sub_field('whastapp')?>&text&type=phone_number&app_absent=0" class="whatsapp"></a>
                       <?php endif; ?>
+
                       <?php
                           $isFirstX = get_sub_field('coordX');
                           $isFirstY = get_sub_field('coordy');
